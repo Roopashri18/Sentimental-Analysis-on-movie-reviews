@@ -43,22 +43,122 @@ Open http://localhost:5173 or check the live deployment.
 🏗 Project Structure
 
 movie-sentiment-analyzer/
+├── public/
+│   └── data/
+│       └── mini_imdb_reviews.csv        # Sample dataset
 ├── src/
 │   ├── components/
-│   │   ├── Header.tsx               # App header with title
-│   │   ├── ReviewInput.tsx          # Review input form
-│   │   ├── SentimentResult.tsx      # Results display
-│   │   └── Features.tsx             # Features showcase
+│   │   ├── Header.tsx                   # App title/header
+│   │   ├── ReviewInput.tsx              # Input form
+│   │   ├── SentimentResult.tsx          # Display results
+│   │   └── Features.tsx                 # Features list
 │   ├── hooks/
-│   │   └── useSentiment.ts          # Custom hook for sentiment analysis
+│   │   └── useSentiment.ts              # Custom sentiment logic
 │   ├── services/
-│   │   └── sentimentService.ts      # Sentiment analysis logic
+│   │   └── sentimentService.ts          # Sentiment detection logic
 │   ├── types/
-│   │   └── index.ts                 # TypeScript type definitions
-│   ├── App.tsx                      # Main application component
-│   ├── main.tsx                     # React entry point
-│   └── index.css                    # Global styles
+│   │   └── index.ts                     # Type definitions
+│   ├── App.tsx                          # Main component
+│   ├── main.tsx                         # Entry point
+│   └── index.css                        # Global styles
 ├── package.json
 ├── tailwind.config.js
 └── README.md
+
+🎯 How It Works
+
+1. Input: User enters a movie review
+
+2. Sentiment Analysis: ML logic processes the text
+
+3. Movie Detection: Extracts movie title & fetches IMDb rating/poster
+
+4. Display: Shows sentiment, rating, and animations
+
+
+🎨 UI & Design
+
+Glassmorphism UI with backdrop blur
+
+Responsive layout for all screen sizes
+
+Gradient backgrounds
+
+Framer Motion animations
+
+Modern typography with Inter font
+
+
+🔧 Customization Tips
+
+To add more movies to the demo database, edit:
+
+// src/services/sentimentService.ts
+const movieDatabase: Record<string, MovieInfo> = {
+  'your-movie': {
+    title: 'Your Movie',
+    poster: 'https://your-url.jpg',
+    rating: 8.5,
+    year: 2023
+  }
+}
+
+To customize styling, edit:
+
+src/index.css
+
+tailwind.config.js
+
+🧠 Machine Learning Notes
+
+This demo uses a basic keyword-based approach. For production:
+
+Use BERT / SVM / Logistic Regression
+
+Train on a full IMDb or Rotten Tomatoes dataset
+
+Serve model via Flask, FastAPI, or TensorFlow Serving
+
+Include metrics (accuracy, F1-score, etc.)
+
+🛰 Deployment
+
+On Netlify
+
+npm run build
+# then upload dist/ folder via Netlify UI
+
+On Vercel
+
+Connect repo to Vercel
+
+It auto-detects Vite and builds for you
+
+
+🤝 Contributing
+
+1. Fork the repo
+
+2. Create a branch: git checkout -b feature-name
+
+3. Commit changes: git commit -m "Add feature"
+
+4. Push: git push origin feature-name
+
+5. Open a Pull Request
+
+
+🙏 Acknowledgments
+
+IMDb for poster and rating APIs
+
+Tailwind CSS
+
+Framer Motion
+
+Lucide Icons
+
+
+
+
 

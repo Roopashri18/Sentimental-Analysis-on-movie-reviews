@@ -127,14 +127,15 @@ Include metrics (accuracy, F1-score, etc.)
 
 On Netlify
 
-npm run build
-# then upload dist/ folder via Netlify UI
+1.Build the project: npm run build
+2.Deploy to Netlify with the dist folder
+3.Configure environment variables if needed
+
 
 On Vercel
-
-Connect repo to Vercel
-
-It auto-detects Vite and builds for you
+1.Connect your GitHub repository to Vercel
+2.Vercel will automatically detect the Vite configuration
+3.Deploy with zero configuration
 
 
 🤝 Contributing

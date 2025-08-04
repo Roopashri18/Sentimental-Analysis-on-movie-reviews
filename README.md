@@ -93,9 +93,8 @@ Modern typography with Inter font
 
 🔧 Customization Tips
 
-To add more movies to the demo database, edit:
-
-// src/services/sentimentService.ts
+To add more movies to the demo database, edit:// src/services/sentimentService.ts
+```
 const movieDatabase: Record<string, MovieInfo> = {
   'your-movie': {
     title: 'Your Movie',
@@ -104,6 +103,7 @@ const movieDatabase: Record<string, MovieInfo> = {
     year: 2023
   }
 }
+```
 
 To customize styling, edit:
 

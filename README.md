@@ -135,6 +135,7 @@ On Netlify
 
 
 On Vercel
+
 1.Connect your GitHub repository to Vercel
 
 2.Vercel will automatically detect the Vite configuration

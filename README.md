@@ -42,6 +42,7 @@ Open http://localhost:5173 or check the live deployment.
 
 🏗 Project Structure
 
+```
 movie-sentiment-analyzer/
 ├── public/
 │   └── data/
@@ -64,6 +65,7 @@ movie-sentiment-analyzer/
 ├── package.json
 ├── tailwind.config.js
 └── README.md
+```
 
 🎯 How It Works
 
